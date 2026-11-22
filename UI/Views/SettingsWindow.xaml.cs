@@ -3,6 +3,7 @@ using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using System.Windows.Media.Imaging;
 using Microsoft.Win32;
 using LyricIsland.Core.Models;
 using LyricIsland.Core.Services;
@@ -35,6 +36,32 @@ public partial class SettingsWindow : Window
             if (TimingOffsetText != null)
                 TimingOffsetText.Text = $"{(int)e.NewValue} ms";
         };
+    }
+
+    private void LoadWindowIcon()
+    {
+        try
+        {
+            string[] candidates = {
+                Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Assets", "logo.ico"),
+                Path.Combine(Directory.GetCurrentDirectory(), "Assets", "logo.ico"),
+                Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Programs", "lysyn", "Assets", "logo.ico")
+            };
+            foreach (var p in candidates)
+            {
+                if (File.Exists(p))
+                {
+                    var bmp = new BitmapImage(new Uri(p, UriKind.Absolute));
+                    Icon = bmp;
+                    if (HeaderLogoImage != null)
+                    {
+                        HeaderLogoImage.Source = bmp;
+                    }
+                    break;
+                }
+            }
+        }
+        catch { }
     }
 
     private void PopulateFontFamilies()

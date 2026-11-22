@@ -37,3 +37,4 @@ C:\Users\ayush\Downloads\project\New folder\nodge\bin\Release\net9.0-windows10.0
 C:\Users\ayush\Downloads\project\New folder\nodge\bin\Release\net9.0-windows10.0.19041.0\Assets\Store\Square44x44Logo.png
 C:\Users\ayush\Downloads\project\New folder\nodge\bin\Release\net9.0-windows10.0.19041.0\Assets\Store\StoreLogo.png
 C:\Users\ayush\Downloads\project\New folder\nodge\bin\Release\net9.0-windows10.0.19041.0\Assets\Store\Wide310x150Logo.png
+C:\Users\ayush\Downloads\project\New folder\nodge\obj\Release\net9.0-windows10.0.19041.0\LyricIsland.sourcelink.json

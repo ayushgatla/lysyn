@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("lysyn")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6af9135e1b4011cfcfc52fe7474043b84f1c0737")]
 [assembly: System.Reflection.AssemblyProductAttribute("lysyn")]
 [assembly: System.Reflection.AssemblyTitleAttribute("lysyn")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
