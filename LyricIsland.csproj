@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows10.0.19041.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>Assets\logo.ico</ApplicationIcon>
+    <RootNamespace>LyricIsland</RootNamespace>
+    <AssemblyName>lysyn</AssemblyName>
+    <Product>lysyn</Product>
+    <Title>lysyn</Title>
+    <Version>1.0.0</Version>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PublishSingleFile>false</PublishSingleFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Tests\**" />
+    <None Remove="Tests\**" />
+    <Compile Remove="dist\**" />
+    <None Remove="dist\**" />
+    <Compile Remove="Installer\**" />
+    <None Remove="Installer\**" />
+    <Page Remove="Installer\**" />
+    <ApplicationDefinition Remove="Installer\**" />
+    <Content Include="Assets\**" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

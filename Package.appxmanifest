@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+  IgnorableNamespaces="uap rescap">
+
+  <Identity
+    Name="lysyn"
+    Publisher="CN=YOUR-PARTNER-CENTER-ID"
+    Version="1.0.0.0"
+    ProcessorArchitecture="x64" />
+
+  <Properties>
+    <DisplayName>lysyn</DisplayName>
+    <PublisherDisplayName>lysyn</PublisherDisplayName>
+    <Logo>Assets\Store\StoreLogo.png</Logo>
+    <Description>Dynamic island notch widget with real-time synchronized lyrics, audio visualizer, and animated companions for Windows.</Description>
+  </Properties>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.19041.0" MaxVersionTested="10.0.26100.0" />
+  </Dependencies>
+
+  <Resources>
+    <Resource Language="en-US" />
+  </Resources>
+
+  <Applications>
+    <Application Id="lysyn"
+      Executable="lysyn.exe"
+      EntryPoint="Windows.FullTrustApplication">
+      <uap:VisualElements
+        DisplayName="lysyn"
+        Description="Windows Dynamic Lyrics Widget"
+        BackgroundColor="#101015"
+        Square150x150Logo="Assets\Store\Square150x150Logo.png"
+        Square44x44Logo="Assets\Store\Square44x44Logo.png">
+        <uap:DefaultTile Wide310x150Logo="Assets\Store\Wide310x150Logo.png" Square310x310Logo="Assets\Store\Square310x310Logo.png" />
+        <uap:SplashScreen Image="Assets\Store\SplashScreen.png" BackgroundColor="#101015" />
+      </uap:VisualElements>
+    </Application>
+  </Applications>
+
+  <Capabilities>
+    <rescap:Capability Name="runFullTrust" />
+  </Capabilities>
+</Package>

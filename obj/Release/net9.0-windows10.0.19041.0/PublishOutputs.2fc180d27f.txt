@@ -1,0 +1,9 @@
+C:\Users\ayush\Downloads\project\New folder\nodge\dist\LyricIsland\LyricIsland.exe
+C:\Users\ayush\Downloads\project\New folder\nodge\dist\LyricIsland\Assets\arisu-aris.gif
+C:\Users\ayush\Downloads\project\New folder\nodge\dist\LyricIsland\Assets\AssetGenerator.cs
+C:\Users\ayush\Downloads\project\New folder\nodge\dist\LyricIsland\LyricIsland.dll
+C:\Users\ayush\Downloads\project\New folder\nodge\dist\LyricIsland\LyricIsland.deps.json
+C:\Users\ayush\Downloads\project\New folder\nodge\dist\LyricIsland\LyricIsland.runtimeconfig.json
+C:\Users\ayush\Downloads\project\New folder\nodge\dist\LyricIsland\LyricIsland.pdb
+C:\Users\ayush\Downloads\project\New folder\nodge\dist\LyricIsland\Microsoft.Windows.SDK.NET.dll
+C:\Users\ayush\Downloads\project\New folder\nodge\dist\LyricIsland\WinRT.Runtime.dll

@@ -1,0 +1,7 @@
+C:\Users\ayush\Downloads\project\New folder\nodge\bin\Publish\LyricIsland.exe
+C:\Users\ayush\Downloads\project\New folder\nodge\bin\Publish\LyricIsland.dll
+C:\Users\ayush\Downloads\project\New folder\nodge\bin\Publish\LyricIsland.deps.json
+C:\Users\ayush\Downloads\project\New folder\nodge\bin\Publish\LyricIsland.runtimeconfig.json
+C:\Users\ayush\Downloads\project\New folder\nodge\bin\Publish\LyricIsland.pdb
+C:\Users\ayush\Downloads\project\New folder\nodge\bin\Publish\Microsoft.Windows.SDK.NET.dll
+C:\Users\ayush\Downloads\project\New folder\nodge\bin\Publish\WinRT.Runtime.dll

@@ -1,0 +1,183 @@
+<Window x:Class="lysyn.Installer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="lysyn Setup"
+        Height="400" Width="520"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        ResizeMode="NoResize">
+
+    <Border Background="#101015"
+            BorderBrush="#252533"
+            BorderThickness="1"
+            CornerRadius="16"
+            Margin="8"
+            ClipToBounds="True">
+        <Grid MouseLeftButtonDown="Window_MouseLeftButtonDown">
+            <Grid.RowDefinitions>
+                <!-- Titlebar / Header -->
+                <RowDefinition Height="Auto" />
+                <!-- Content -->
+                <RowDefinition Height="*" />
+                <!-- Footer Buttons -->
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!-- HEADER -->
+            <Border Grid.Row="0"
+                    Background="#14141B"
+                    BorderBrush="#252533"
+                    BorderThickness="0,0,0,1"
+                    Padding="20,16">
+                <Grid>
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        <Border Width="38" Height="38"
+                                CornerRadius="10"
+                                Background="#1A1A24"
+                                BorderBrush="#2F2F3F"
+                                BorderThickness="1"
+                                Margin="0,0,14,0">
+                            <Image x:Name="HeaderLogo"
+                                   Width="24" Height="24"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center" />
+                        </Border>
+                        <StackPanel VerticalAlignment="Center">
+                            <TextBlock Text="lysyn"
+                                       FontSize="20"
+                                       FontWeight="Bold"
+                                       Foreground="#F4F4F5" />
+                            <TextBlock Text="Windows Dynamic Lyrics Widget Setup"
+                                       FontSize="12"
+                                       Foreground="#9CA3AF"
+                                       Margin="0,2,0,0" />
+                        </StackPanel>
+                    </StackPanel>
+
+                    <Button Content="✕"
+                            Click="CloseButton_Click"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Top"
+                            Background="Transparent"
+                            Foreground="#71717A"
+                            BorderThickness="0"
+                            FontSize="13"
+                            Cursor="Hand"
+                            Padding="8,4" />
+                </Grid>
+            </Border>
+
+            <!-- BODY CONTENT -->
+            <StackPanel Grid.Row="1" Margin="24,20">
+                <TextBlock Text="Installation Directory"
+                           FontSize="12"
+                           FontWeight="SemiBold"
+                           Foreground="#9CA3AF"
+                           Margin="0,0,0,6" />
+
+                <TextBox x:Name="TargetPathBox"
+                         IsReadOnly="True"
+                         Background="#181822"
+                         Foreground="#F4F4F5"
+                         BorderBrush="#252533"
+                         BorderThickness="1"
+                         Padding="10,6"
+                         FontSize="12"
+                         Margin="0,0,0,16" />
+
+                <TextBlock Text="Shortcuts &amp; Options"
+                           FontSize="12"
+                           FontWeight="SemiBold"
+                           Foreground="#9CA3AF"
+                           Margin="0,0,0,8" />
+
+                <CheckBox x:Name="DesktopShortcutCheck"
+                          Content="Create Desktop Shortcut"
+                          IsChecked="True"
+                          Foreground="#E4E4E7"
+                          FontSize="13"
+                          Margin="0,0,0,8" />
+
+                <CheckBox x:Name="StartMenuCheck"
+                          Content="Create Start Menu Shortcut"
+                          IsChecked="True"
+                          Foreground="#E4E4E7"
+                          FontSize="13"
+                          Margin="0,0,0,8" />
+
+                <CheckBox x:Name="LaunchAfterCheck"
+                          Content="Launch lysyn immediately after installation"
+                          IsChecked="True"
+                          Foreground="#E4E4E7"
+                          FontSize="13"
+                          Margin="0,0,0,14" />
+
+                <!-- Progress Bar & Status Text -->
+                <ProgressBar x:Name="InstallProgressBar"
+                             Height="6"
+                             Minimum="0" Maximum="100"
+                             Value="0"
+                             Foreground="#F4F4F5"
+                             Background="#22222E"
+                             BorderThickness="0"
+                             Visibility="Hidden"
+                             Margin="0,0,0,6" />
+
+                <TextBlock x:Name="StatusText"
+                           Text="Ready to install lysyn."
+                           FontSize="12"
+                           Foreground="#A1A1AA" />
+            </StackPanel>
+
+            <!-- FOOTER -->
+            <Border Grid.Row="2"
+                    Background="#14141B"
+                    BorderBrush="#252533"
+                    BorderThickness="0,1,0,0"
+                    Padding="20,12">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <Button x:Name="CancelBtn"
+                            Content="Cancel"
+                            Click="CloseButton_Click"
+                            Background="#22222E"
+                            Foreground="#A1A1AA"
+                            BorderThickness="0"
+                            Padding="16,8"
+                            FontSize="12"
+                            FontWeight="SemiBold"
+                            Margin="0,0,10,0"
+                            Cursor="Hand">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="{TemplateBinding Background}" CornerRadius="6">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Margin="{TemplateBinding Padding}" />
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+                    <Button x:Name="InstallBtn"
+                            Content="Install lysyn"
+                            Click="InstallBtn_Click"
+                            Background="#F4F4F5"
+                            Foreground="#09090B"
+                            BorderThickness="0"
+                            Padding="22,8"
+                            FontSize="12"
+                            FontWeight="Bold"
+                            Cursor="Hand">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Background="{TemplateBinding Background}" CornerRadius="6">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Margin="{TemplateBinding Padding}" />
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Border>
+</Window>
