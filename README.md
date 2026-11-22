@@ -21,6 +21,16 @@
 
 <br/>
 
+## 📸 Screenshots
+
+![lysyn Dynamic Island in Action](Assets/image.png)
+
+<br/>
+
+![lysyn Modern Settings Dashboard](Assets/image%20copy.png)
+
+<br/>
+
 ## ✨ Key Features
 
 ### 🎵 Real-Time Synced Lyrics
