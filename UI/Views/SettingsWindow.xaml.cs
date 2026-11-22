@@ -23,6 +23,7 @@ public partial class SettingsWindow : Window
     public SettingsWindow(SettingsManager settingsManager)
     {
         InitializeComponent();
+        LoadWindowIcon();
         _settingsManager = settingsManager;
 
         PopulateFontFamilies();

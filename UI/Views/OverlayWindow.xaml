@@ -6,7 +6,6 @@
         xmlns:controls="clr-namespace:LyricIsland.UI.Controls"
         mc:Ignorable="d"
         Title="lysyn"
-        Icon="Assets/logo.ico"
         Height="44" Width="280"
         WindowStyle="None"
         AllowsTransparency="True"

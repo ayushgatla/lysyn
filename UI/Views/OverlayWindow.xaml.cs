@@ -51,6 +51,7 @@ public partial class OverlayWindow : Window
         AnimationManager animationManager)
     {
         InitializeComponent();
+        LoadWindowIcon();
 
         _settingsManager = settingsManager;
         _mediaManager = mediaManager;
@@ -93,6 +94,27 @@ public partial class OverlayWindow : Window
 
         var source = HwndSource.FromHwnd(_hwnd);
         source?.AddHook(WndProc);
+    }
+
+    private void LoadWindowIcon()
+    {
+        try
+        {
+            string[] candidates = {
+                Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Assets", "logo.ico"),
+                Path.Combine(Directory.GetCurrentDirectory(), "Assets", "logo.ico"),
+                Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Programs", "lysyn", "Assets", "logo.ico")
+            };
+            foreach (var p in candidates)
+            {
+                if (File.Exists(p))
+                {
+                    Icon = BitmapFrame.Create(new Uri(p, UriKind.Absolute));
+                    break;
+                }
+            }
+        }
+        catch { }
     }
 
     private IntPtr WndProc(IntPtr hwnd, int msg, IntPtr wParam, IntPtr lParam, ref bool handled)

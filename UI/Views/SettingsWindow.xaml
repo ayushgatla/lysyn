@@ -6,7 +6,6 @@
         xmlns:controls="clr-namespace:LyricIsland.UI.Controls"
         mc:Ignorable="d"
         Title="Settings – lysyn"
-        Icon="Assets/logo.ico"
         Height="660" Width="880"
         MinHeight="600" MinWidth="800"
         WindowStartupLocation="CenterScreen"
@@ -96,7 +95,7 @@
                                     BorderBrush="{StaticResource CardBorder}"
                                     BorderThickness="1"
                                     Margin="0,0,14,0">
-                                <Image Source="Assets/logo.ico"
+                                <Image x:Name="HeaderLogoImage"
                                        Width="22" Height="22"
                                        HorizontalAlignment="Center"
                                        VerticalAlignment="Center" />
